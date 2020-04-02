@@ -3,7 +3,6 @@
 -- Pour le projet MyCitY RP
 --================================
 ESX	= nil;
-local attente = 0;
 
 -- Initialisation du FrameWork
 TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
