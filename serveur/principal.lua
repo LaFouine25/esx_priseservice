@@ -54,7 +54,7 @@ AddEventHandler('esx_priseservice:SRV_prise', function()
 		},
 		function(grade)
 			-- Attribution du grade En Service
-			print('ESX_PRISESERVICE: ' .. grade[1].grade)
+			-- print('ESX_PRISESERVICE: ' .. grade[1].grade)
 			xPlayer.setJob(job, grade[1].grade);
 			TriggerClientEvent('esx_priseservice:CLT_update', source, 1)
 		end
@@ -74,6 +74,6 @@ AddEventHandler('esx_priseservice:SRV_hors', function()
 		},
 		nil
 	);
-	print('ESX_PRISESERVICE: ' .. job);
+	-- print('ESX_PRISESERVICE: ' .. job);
 	xPlayer.setJob(job, 99);
 end)

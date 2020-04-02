@@ -30,7 +30,11 @@ RegisterNetEvent('esx:playerLoaded')
 AddEventHandler('esx:playerLoaded', function(xPlayer)
 	ESX.PlayerData = xPlayer;
 	PlayerLoaded = true;
-	TriggerServerEvent('esx_priseservice:SRV_loaded');
+	if ESX.PlayerData.job.grade ~= 99 then
+		TriggerServerEvent('esx_priseservice:SRV_loaded');
+	else
+		enService = false;
+	end
 end)
 
 -- Dans le cas d'un changement de boulot
