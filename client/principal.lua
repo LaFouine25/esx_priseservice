@@ -43,6 +43,9 @@ AddEventHandler('esx:setJob', function(job)
 	if ESX.PlayerData.job.name ~= job.name then
 		ESX.PlayerData.job = job;
 		TriggerServerEvent('esx_priseservice:SRV_loaded');
+	elseif ESX.PlayerData.job.grade ~= 99 then
+		ESX.PlayerData.job = job;
+		TriggerServerEvent('esx_priseservice:SRV_loaded');
 	end
 end)
 
