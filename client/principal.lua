@@ -30,8 +30,9 @@ RegisterNetEvent('esx:playerLoaded')
 AddEventHandler('esx:playerLoaded', function(xPlayer)
 	ESX.PlayerData = xPlayer;
 	PlayerLoaded = true;
-	if ESX.PlayerData.job.grade ~= 99 then
+	if ESX.PlayerData.job.grade ~= 99 and ESX.PlayerData.job ~= nil then
 		TriggerServerEvent('esx_priseservice:SRV_loaded');
+		enService = true;
 	else
 		enService = false;
 	end
@@ -42,12 +43,17 @@ RegisterNetEvent('esx:setJob')
 AddEventHandler('esx:setJob', function(job)
 	if ESX.PlayerData.job.name ~= job.name then
 		ESX.PlayerData.job = job;
+		enService = true;
 		TriggerServerEvent('esx_priseservice:SRV_loaded');
-	elseif ESX.PlayerData.job.name == job.name and ESX.PlayerData.job.grade ~= 99 then
-		ESX.PlayerData.job = job;
-		TriggerServerEvent('esx_priseservice:SRV_loaded');
+		print('Changement de métier')
+	-- elseif ESX.PlayerData.job.name == job.name and ESX.PlayerData.job.grade ~= 99 then
+		-- ESX.PlayerData.job = job;
+		-- enService = true;
+		-- TriggerServerEvent('esx_priseservice:SRV_loaded');
+		-- print('Changement de grade')
 	else
 		ESX.PlayerData.job = job;
+		print('Prise Fin de service')
 	end
 end)
 
