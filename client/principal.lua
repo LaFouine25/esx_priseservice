@@ -46,6 +46,11 @@ AddEventHandler('esx:setJob', function(job)
 		enService = true;
 		TriggerServerEvent('esx_priseservice:SRV_loaded');
 		print('Changement de métier')
+	elseif job.grade ~= 99 then
+		ESX.PlayerData.job = job;
+		enService = true;
+		TriggerServerEvent('esx_priseservice:SRV_loaded');
+		print('Changement de grade' .. job.grade)
 	else
 		ESX.PlayerData.job = job;
 		print('Prise Fin de service')

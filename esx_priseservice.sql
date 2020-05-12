@@ -13,4 +13,3 @@ COLLATE='utf8mb4_general_ci'
 INSERT INTO `job_grades` (`job_name`, `grade`, `name`, `label`, `salary`, `skin_male`, `skin_female`) VALUES ('police', 99, 'horsservice', 'Hors Service', 0, '{}', '{}');
 INSERT INTO `job_grades` (`job_name`, `grade`, `name`, `label`, `salary`, `skin_male`, `skin_female`) VALUES ('ambulance', 99, 'horsservice', 'Hors Service', 0, '{}', '{}');
 INSERT INTO `job_grades` (`job_name`, `grade`, `name`, `label`, `salary`, `skin_male`, `skin_female`) VALUES ('sheriff', 99, 'horsservice', 'Hors Service', 0, '{}', '{}');
-INSERT INTO `job_grades` (`job_name`, `grade`, `name`, `label`, `salary`, `skin_male`, `skin_female`) VALUES ('mechanic', 99, 'horsservice', 'Hors Service', 0, '{}', '{}');
